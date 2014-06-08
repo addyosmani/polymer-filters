@@ -1,9 +1,11 @@
 /**
- * Format a valid date using a specific format
+ * Transform a supplied input date using a specified format
+ * @param  {date} input  
  * @param  {string} format
+ * @return {date}
  */
-Date.prototype.formatDate = function (format) {
-    var date = this,
+PolymerExpressions.prototype.date = function (input, format) {
+    var date = new Date(input),
         day = date.getDate(),
         month = date.getMonth() + 1,
         year = date.getFullYear(),
@@ -57,14 +59,4 @@ Date.prototype.formatDate = function (format) {
     }
 
     return format;
-};
-
-/**
- * Transform a supplied input date using a specified format
- * @param  {date} input  
- * @param  {string} format
- * @return {date}
- */
-PolymerExpressions.prototype.date = function (input, format) {
-    return new Date(input).formatDate(format);
 };
