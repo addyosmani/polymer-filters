@@ -1,5 +1,5 @@
 /**
- * Limit displayed items from an array from an offset
+ * Limit displayed items from an array at an offset by a limit
  * 
  * @param  {array} input
  * @param  {integer} offset
