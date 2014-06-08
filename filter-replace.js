@@ -15,4 +15,4 @@ PolymerExpressions.prototype.replace = function (str, old, new_, maxCount) {
     }
 
     return res;
-}
+};

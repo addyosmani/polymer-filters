@@ -7,6 +7,7 @@
 <script src="filter-reverse.js"></script>
 <script src="filter-replace.js"></script>
 <script src="filter-startsWith.js"></script>
+<script src="filter-wordcount.js"></script>
 
 <!--
 A collection of Polymer filters for formatting values of expressions for display to users
@@ -50,6 +51,10 @@ A collection of Polymer filters for formatting values of expressions for display
     <template repeat="{{phones | limitFrom(1,2)}}">
       {{name}}
     </template>
+
+####Word count
+
+    {{'Hello World' | wordcount}}
 
 @element polymer-filters
 @blurb A collection of Polymer filters for formatting values of expressions for display to users
