@@ -54,6 +54,13 @@
 
     <h3>wordcount</h3>
     {{'Hello World' | wordcount}}
+
+    <h3>round</h3>
+    {{ 45.35 | round }}
+
+    <h3>round(1, 'floor')</h3>
+    {{ 45.35 | round(1, 'floor') }}
+
 </template>
   <script>
 	var template = document.getElementById('view');

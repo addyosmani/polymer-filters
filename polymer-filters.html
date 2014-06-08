@@ -8,6 +8,7 @@
 <script src="filter-replace.js"></script>
 <script src="filter-startsWith.js"></script>
 <script src="filter-wordcount.js"></script>
+<script src="filter-round.js"></script>
 
 <!--
 A collection of Polymer filters for formatting values of expressions for display to users
@@ -55,6 +56,12 @@ A collection of Polymer filters for formatting values of expressions for display
 ####Word count
 
     {{'Hello World' | wordcount}}
+
+####Rounding
+
+    {{ 45.35 | round }}
+
+    {{ 45.35 | round(1, 'floor') }}
 
 @element polymer-filters
 @blurb A collection of Polymer filters for formatting values of expressions for display to users
