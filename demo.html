@@ -10,23 +10,26 @@
 <body unresolved>
 <template id="view" is="auto-binding">
 
-    <h3>Uppercase</h3>
+    <h3>uppercase</h3>
 
     <p>{{greeting | uppercase}}</p>
 
-    <h3>Lowercase</h3>
+    <h3>lowercase</h3>
 
     <p>{{greeting | lowercase}}</p>
 
-    <h3>Reverse</h3>
+    <h3>reverse</h3>
     {{'Hello World' | reverse}}
+
+    <h3>replace('World','Peeps')</h3>
+    {{'Hello World' | replace('World','Peeps')}}
 
     <h3>startsWith(T)</h3>
     <template repeat="{{friend in friends | startsWith(T)}}">
         {{ friend.name }}
     </template>
 
-    <h3>Date('yyyy-MM-dd HH:mm:ss Z')</h3>
+    <h3>date('yyyy-MM-dd HH:mm:ss Z')</h3>
     {{1288323623006 | date('yyyy-MM-dd HH:mm:ss Z')}}
 
     <h3>orderBy('age')</h3>
