@@ -11,6 +11,7 @@
 <script src="filter-wordcount.js"></script>
 <script src="filter-random.js"></script>
 <script src="filter-round.js"></script>
+<script src="filter-trim.js"></script>
 
 <!--
 A collection of filters for formatting values of [Polymer expressions](www.polymer-project.org/docs/polymer/expressions.html) for display to users.
@@ -40,6 +41,12 @@ A collection of filters for formatting values of [Polymer expressions](www.polym
     {{'Hello World' | replace('World','Peeps')}}
 
 > Hello Peeps
+
+####Trim
+
+    {{' I was a string with leading and trailing whitespace    ' | trim}}
+
+> I was a string with leading and trailing whitespace
 
 ####Date
 
