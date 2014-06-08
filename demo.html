@@ -25,7 +25,7 @@
     {{'Hello World' | replace('World','Peeps')}}
 
     <h3>startsWith(T)</h3>
-    <template repeat="{{friend in friends | startsWith(T)}}">
+    <template repeat="{{friend in friends | startsWith('T')}}">
         {{ friend.name }}
     </template>
 
@@ -61,6 +61,9 @@
     <h3>round(1, 'floor')</h3>
     {{ 45.35 | round(1, 'floor') }}
 
+    <h3>random</h3>
+    {{ colors | random }}
+
 </template>
   <script>
 	var template = document.getElementById('view');
@@ -68,7 +71,7 @@
 	var template = document.getElementById('view');
 	template.phones = phones;
 	template.orderProp = 'age';
-
+	template.colors = ['red','green','blue','yellow'];
 	template.greeting = 'Hello World';
 	template.friends = [{
 	    name: 'Matt'        
