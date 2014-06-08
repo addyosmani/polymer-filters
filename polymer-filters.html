@@ -1,0 +1,84 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <polymer-filters></polymer-filters>
+
+@element polymer-filters
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://polymerlabs.github.io/polymer-filters
+-->
+<polymer-element name="polymer-filters" attributes="notitle author">
+
+  <template>
+
+    <link rel="stylesheet" href="polymer-filters.css" />
+    
+    <h1>Hello from polymer-filters</h1>
+    <content></content>
+
+  </template>
+
+  <script>
+
+    Polymer('polymer-filters', {
+      /**
+       * The `author` attribute sets an initial author
+       * 
+       * @attribute author
+       * @type string
+       */
+      author: 'Dimitri Glazkov',
+      
+      /**
+       * `fancy` is a property that does something fancy.
+       * 
+       * @property fancy
+       * @type bool
+       */
+      fancy: false,
+
+      ready: function() {
+        // Ready is a lifecycle callback.
+        // You can do setup work in here.
+        // More info: http://www.polymer-project.org/docs/polymer/polymer.html#lifecyclemethods
+      },
+
+      /**
+       * The `sayHello` method will return a greeting
+       * 
+       * @method sayHello
+       * @return {String} Returns a string greeting.
+       * @param {String} greeting Pass in a specific greeting
+       */
+      sayHello: function(greeting) {
+        var response = greeting || 'Hello World!';
+        return 'polymer-filters says, ' + response;
+      },
+
+      /**
+       * The `polymer-filters-lasers-success` event is fired whenever we
+       * call fireLasers.
+       * 
+       * @event polymer-filters-lasers-success
+       */
+
+      /**
+       * The `fireLasers` method will fire the lasers. At least
+       * it will dispatch an event that claims lasers were fired :)
+       * 
+       * @method fireLasers
+       */
+      fireLasers: function() {
+        this.fire('polymer-filters-lasers-success', { sound: 'Pew pew pew!' });
+      }
+
+    });
+
+  </script>
+
+</polymer-element>
