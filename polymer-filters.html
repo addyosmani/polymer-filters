@@ -1,84 +1,53 @@
 <link rel="import" href="../polymer/polymer.html">
+<script src="filter-date.js"></script>
+<script src="filter-limitFrom.js"></script>
+<script src="filter-lowercase.js"></script>
+<script src="filter-uppercase.js"></script>
+<script src="filter-orderBy.js"></script>
+<script src="filter-reverse.js"></script>
+<script src="filter-startsWith.js"></script>
 
 <!--
-Element providing solution to no problem in particular.
+A collection of Polymer filters for formatting values of expressions for display to users
 
-##### Example
+### Examples
 
-    <polymer-filters></polymer-filters>
+####Uppercase
+
+    {{greeting | uppercase}}
+
+####Lowercase
+
+    {{greeting | lowercase}}
+
+####Reverse
+
+    {{'Hello World' | reverse}}
+
+####Date
+
+    {{1288323623006 | date('yyyy-MM-dd HH:mm:ss Z')}}
+
+####Order an array by the expression predicate
+
+    <template repeat="{{phones | orderBy('age')}}">
+      {{name}}
+    </template>
+
+####Filter by items starting with a specific letter
+
+    <template repeat="{{friend in friends | startsWith(T)}}">
+      {{ friend.name }}
+    </template>
+
+####Limit displayed items from an array at an offset by a limit
+
+    <template repeat="{{phones | limitFrom(1,2)}}">
+      {{name}}
+    </template>
 
 @element polymer-filters
-@blurb Element providing solution to no problem in particular.
-@status alpha
-@homepage http://polymerlabs.github.io/polymer-filters
+@blurb A collection of Polymer filters for formatting values of expressions for display to users
+@homepage http://addyosmani.github.io/polymer-filters
 -->
-<polymer-element name="polymer-filters" attributes="notitle author">
 
-  <template>
-
-    <link rel="stylesheet" href="polymer-filters.css" />
-    
-    <h1>Hello from polymer-filters</h1>
-    <content></content>
-
-  </template>
-
-  <script>
-
-    Polymer('polymer-filters', {
-      /**
-       * The `author` attribute sets an initial author
-       * 
-       * @attribute author
-       * @type string
-       */
-      author: 'Dimitri Glazkov',
-      
-      /**
-       * `fancy` is a property that does something fancy.
-       * 
-       * @property fancy
-       * @type bool
-       */
-      fancy: false,
-
-      ready: function() {
-        // Ready is a lifecycle callback.
-        // You can do setup work in here.
-        // More info: http://www.polymer-project.org/docs/polymer/polymer.html#lifecyclemethods
-      },
-
-      /**
-       * The `sayHello` method will return a greeting
-       * 
-       * @method sayHello
-       * @return {String} Returns a string greeting.
-       * @param {String} greeting Pass in a specific greeting
-       */
-      sayHello: function(greeting) {
-        var response = greeting || 'Hello World!';
-        return 'polymer-filters says, ' + response;
-      },
-
-      /**
-       * The `polymer-filters-lasers-success` event is fired whenever we
-       * call fireLasers.
-       * 
-       * @event polymer-filters-lasers-success
-       */
-
-      /**
-       * The `fireLasers` method will fire the lasers. At least
-       * it will dispatch an event that claims lasers were fired :)
-       * 
-       * @method fireLasers
-       */
-      fireLasers: function() {
-        this.fire('polymer-filters-lasers-success', { sound: 'Pew pew pew!' });
-      }
-
-    });
-
-  </script>
-
-</polymer-element>
