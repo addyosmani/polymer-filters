@@ -6,6 +6,7 @@
 <script src="filter-orderBy.js"></script>
 <script src="filter-reverse.js"></script>
 <script src="filter-replace.js"></script>
+<script src="filter-firstlast.js"></script>
 <script src="filter-startsWith.js"></script>
 <script src="filter-wordcount.js"></script>
 <script src="filter-random.js"></script>
@@ -76,11 +77,23 @@ A collection of Polymer filters for formatting values of expressions for display
 
 > 2
 
+#####First
+
+    {{ colorsArray | first }}
+
+> red
+
+#####Last
+
+    {{ colorsArray | last }}
+
+> yellow
+
 ####Random
 
     {{ colorsArray | random }}
 
-> blue
+> green
 
 ####Rounding
 
