@@ -8,6 +8,7 @@
 <script src="filter-replace.js"></script>
 <script src="filter-startsWith.js"></script>
 <script src="filter-wordcount.js"></script>
+<script src="filter-random.js"></script>
 <script src="filter-round.js"></script>
 
 <!--
@@ -17,29 +18,41 @@ A collection of Polymer filters for formatting values of expressions for display
 
 ####Uppercase
 
-    {{greeting | uppercase}}
+    {{'Hello World' | uppercase}}
+
+> HELLO WORLD
 
 ####Lowercase
 
-    {{greeting | lowercase}}
+    {{'Hello World' | lowercase}}
+
+> hello world
 
 ####Reverse
 
     {{'Hello World' | reverse}}
 
+> dlroW olleH
+
 ####Replace
 
     {{'Hello World' | replace('World','Peeps')}}
+
+> Hello Peeps
 
 ####Date
 
     {{1288323623006 | date('yyyy-MM-dd HH:mm:ss Z')}}
 
+> 2010-10-29 04:40:23 Z
+
 ####Order an array by the expression predicate
 
-    <template repeat="{{phones | orderBy('age')}}">
+    <template repeat="{{friends | orderBy('age')}}">
       {{name}}
     </template>
+
+> Paul Eric Rob Timothy
 
 ####Filter by items starting with a specific letter
 
@@ -47,21 +60,37 @@ A collection of Polymer filters for formatting values of expressions for display
       {{ friend.name }}
     </template>
 
+> Timothy
+
 ####Limit displayed items from an array at an offset by a limit
 
-    <template repeat="{{phones | limitFrom(1,2)}}">
+    <template repeat="{{friends | limitFrom(1,2)}}">
       {{name}}
     </template>
+
+> Paul
 
 ####Word count
 
     {{'Hello World' | wordcount}}
 
+> 2
+
+####Random
+
+    {{ colorsArray | random }}
+
+> blue
+
 ####Rounding
 
     {{ 45.35 | round }}
 
+> 45
+
     {{ 45.35 | round(1, 'floor') }}
+
+> 45.3
 
 @element polymer-filters
 @blurb A collection of Polymer filters for formatting values of expressions for display to users
