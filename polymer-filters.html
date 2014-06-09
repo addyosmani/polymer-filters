@@ -14,6 +14,7 @@
 <script src="filter-truncate.js"></script>
 <script src="filter-titlecase.js"></script>
 <script src="filter-trim.js"></script>
+<script src="filter-length.js"></script>
 
 <!--
 A collection of filters for formatting values of [Polymer expressions](www.polymer-project.org/docs/polymer/expressions.html) for display to users.
@@ -64,17 +65,17 @@ A collection of filters for formatting values of [Polymer expressions](www.polym
 
 > Lorem Ca [READ MORE]
 
-####Date
-
-    {{1288323623006 | date('yyyy-MM-dd HH:mm:ss Z')}}
-
-> 2010-10-29 04:40:23 Z
-
 ####Title case
 
     {{'this is a sentence that was not using title case.' | titlecase}}
 
 > This Is A Sentence That Was Not Using Title Case.
+
+####Date
+
+    {{1288323623006 | date('yyyy-MM-dd HH:mm:ss Z')}}
+
+> 2010-10-29 04:40:23 Z
 
 ####Order an array by the expression predicate
 
@@ -123,6 +124,12 @@ A collection of filters for formatting values of [Polymer expressions](www.polym
     {{ colorsArray | random }}
 
 > green
+
+####Length
+
+    {{'Hello World' | length}}
+
+> 11
 
 ####Rounding
 
