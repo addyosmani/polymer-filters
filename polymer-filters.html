@@ -11,6 +11,7 @@
 <script src="filter-wordcount.js"></script>
 <script src="filter-random.js"></script>
 <script src="filter-round.js"></script>
+<script src="filter-truncate.js"></script>
 <script src="filter-trim.js"></script>
 
 <!--
@@ -47,6 +48,20 @@ A collection of filters for formatting values of [Polymer expressions](www.polym
     {{' I was a string with leading and trailing whitespace    ' | trim}}
 
 > I was a string with leading and trailing whitespace
+
+####Truncate
+
+    {{'Lorem Catsum Itsum' | truncate(8) }}
+
+> Lorem...
+
+    {{'Lorem Catsum Itsum' | truncate(8, true) }}
+
+> Lorem Ca...
+
+    {{'Lorem Catsum Itsum' | truncate(8, true, ' [READ MORE]') }}
+
+> Lorem Ca [READ MORE]
 
 ####Date
 
@@ -115,5 +130,6 @@ A collection of filters for formatting values of [Polymer expressions](www.polym
 @element polymer-filters
 @blurb A collection of Polymer filters for formatting values of expressions for display to users
 @homepage http://addyosmani.github.io/polymer-filters
+@inspiration http://jinja.pocoo.org/docs/templates/
 -->
 

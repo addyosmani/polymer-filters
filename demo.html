@@ -24,6 +24,9 @@
     <h3>replace('World','Peeps')</h3>
     {{'Hello World' | replace('World','Peeps')}}
 
+    <h3>truncate(8, true)</h3>
+    {{'Lorem Catsum Itsum' | truncate(8, true) }}
+
     <h3>startsWith(T)</h3>
     <template repeat="{{friend in friends | startsWith('T')}}">
         {{ friend.name }}
@@ -83,15 +86,20 @@
 	template.colors = ['red','green','blue','yellow'];
 	template.greeting = 'Hello World';
 	template.friends = [{
-	    name: 'Matt'        
+	    name: 'Matt',
+        dinner: 'pizza'       
 	  }, {
-	    name: 'Paul'
+	    name: 'Paul',
+        dinner: 'sushi'
 	  }, {
-	    name: 'Eric'
+	    name: 'Eric',
+        dinner: 'hummus'
 	  }, {
-	    name: 'Rob'
+	    name: 'Rob',
+        dinner: 'burger'
 	  }, {
-	    name: 'Timothy'
+	    name: 'Timothy',
+        dinner: 'pasta'
 	  }];
   </script>
 </body>
