@@ -27,6 +27,9 @@
     <h3>truncate(8, true)</h3>
     {{'Lorem Catsum Itsum' | truncate(8, true) }}
 
+    <h3>titlecase</h3>
+    {{'this is a sentence that was not using title case.' | titlecase}}
+
     <h3>startsWith(T)</h3>
     <template repeat="{{friend in friends | startsWith('T')}}">
         {{ friend.name }}
