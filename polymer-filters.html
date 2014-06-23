@@ -15,6 +15,7 @@
 <script src="filter-titlecase.js"></script>
 <script src="filter-trim.js"></script>
 <script src="filter-length.js"></script>
+<script src="filter-list.js"></script>
 
 <!--
 A collection of filters for formatting values of [Polymer expressions](http://www.polymer-project.org/docs/polymer/expressions.html) for display to users.
@@ -140,6 +141,16 @@ A collection of filters for formatting values of [Polymer expressions](http://ww
     {{ 45.35 | round(1, 'floor') }}
 
 > 45.3
+
+####Converting arrays to a list
+
+    {{ arr | list }}
+
+> something,somethingelse,etc
+
+    {{ arr | list(" ") }}
+
+> something, somethingelse, etc
 
 @element polymer-filters
 @blurb A collection of Polymer filters for formatting values of expressions for display to users

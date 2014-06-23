@@ -82,6 +82,12 @@
     <h3>trim</h3>
     {{' I was a string with leading and trailing whitespace    ' | trim}}
 
+    <h3>list</h3>
+    {{colors | list}}
+
+    <h3>list(" ")</h3>
+    {{colors | list(" ")}}
+
 </template>
   <script>
 	var template = document.getElementById('view');
