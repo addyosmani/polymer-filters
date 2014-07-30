@@ -48,6 +48,16 @@
         </template>
     </ul>
 
+    <h3>limitTo(2)</h3>
+
+    <ul class="phones">
+        <template repeat="{{phones | limitTo(2)}}">
+            <li>
+                <span><strong>{{name}}</strong> - {{snippet}}</span>
+            </li>
+        </template>
+    </ul>
+
     <h3>limitFrom(1,2)</h3>
 
     <ul class="phones">
