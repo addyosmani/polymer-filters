@@ -13,13 +13,14 @@
     "**/.*"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.3.1",
+    "polymer": "Polymer/polymer#~0.3.4",
     "chai": "~1.9.1",
     "mocha": "~1.19.0"
   },
   "resolutions": {
-    "core-component-page": "0.2.4",
     "polymer": "~0.3.1",
+    "core-shared-lib": "master",
+    "core-component-page": "master",
     "platform": ">=0.3.0 <1.0.0"
   }
 }
