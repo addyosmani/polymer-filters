@@ -1,6 +1,6 @@
 {
   "name": "polymer-filters",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "authors": [
     "Addy Osmani <addyosmani@gmail.com>"
   ],
@@ -16,11 +16,5 @@
     "polymer": "Polymer/polymer#~0.3.4",
     "chai": "~1.9.1",
     "mocha": "~1.19.0"
-  },
-  "resolutions": {
-    "polymer": "~0.3.1",
-    "core-shared-lib": "master",
-    "core-component-page": "master",
-    "platform": ">=0.3.0 <1.0.0"
   }
 }
