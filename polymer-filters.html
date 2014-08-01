@@ -13,6 +13,8 @@
 <script src="filter-round.js"></script>
 <script src="filter-truncate.js"></script>
 <script src="filter-titlecase.js"></script>
+<script src="filter-ltrim.js"></script>
+<script src="filter-rtrim.js"></script>
 <script src="filter-trim.js"></script>
 <script src="filter-length.js"></script>
 <script src="filter-list.js"></script>
@@ -46,6 +48,18 @@ A collection of filters for formatting values of [Polymer expressions](http://ww
     {{'Hello World' | replace('World','Peeps')}}
 
 > Hello Peeps
+
+####LTrim
+
+    {{'    I was a string with leading whitespace' | ltrim}}
+
+> I was a string with leading whitespace
+
+####RTrim
+
+    {{'I was a string with trailing whitespace    ' | rtrim}}
+
+> I was a string with trailing whitespace
 
 ####Trim
 
