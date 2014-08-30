@@ -4,7 +4,7 @@
   "authors": [
     "Addy Osmani <addyosmani@gmail.com>"
   ],
-  "description": "Element providing solution to no problem in particular.",
+  "description": "A collection of Polymer filters for formatting values of expressions.",
   "keywords": "filters, polymer, web-components",
   "main": "polymer-filters.html",
   "license": "Apache 2.0",
@@ -13,7 +13,7 @@
     "**/.*"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.3.4",
+    "polymer": "Polymer/polymer#>=0.4.0 <1.0.0",
     "chai": "~1.9.1",
     "mocha": "~1.19.0"
   }
