@@ -104,11 +104,13 @@
     <h3>list(" ")</h3>
     {{colors | list(" ")}}
 
+    <h3>capitalize</h3>
+    {{greeting | capitalize}}
+
 </template>
   <script>
 	var template = document.getElementById('view');
 	var phones = [{'name':'Nexus S','snippet':'Fast just got faster with Nexus S.','age':1},{'name':'Motorola XOOM with Wi-Fi','snippet':'The Next, Next Generation tablet.','age':2},{'name':'MOTOROLA XOOM','snippet':'The Next, Next Generation tablet.','age':3}];
-	var template = document.getElementById('view');
 	template.phones = phones;
 	template.orderProp = 'age';
 	template.colors = ['red','green','blue','yellow'];
