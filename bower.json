@@ -5,7 +5,7 @@
     "Addy Osmani <addyosmani@gmail.com>"
   ],
   "description": "A collection of Polymer filters for formatting values of expressions.",
-  "keywords": "filters, polymer, web-components",
+  "keywords": ["filters", "polymer", "web-components"],
   "main": "polymer-filters.html",
   "license": "Apache 2.0",
   "homepage": "https://github.com/addyosmani/polymer-filters/",
