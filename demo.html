@@ -117,6 +117,41 @@
     <h3>objectKeys</h3>
     {{{x: 1, y: 2} | objectKeys}}
 
+    <h3>Currency</h3>
+    <h4>Default</h4>
+    {{ 169535.216 | currency }}
+
+    <h4>Custom Currency</h4>
+    {{ 169535.216 | currency('USD$') }}
+
+    <h4>Custom Decimal point</h4>
+    {{ 169535.216 | currency('USD$', 4) }}
+
+    <h3>typeof</h3>
+    <h4>String</h4>
+    {{ 'STRING' | typeof }}
+
+    <h4>Number</h4>
+    {{ 192.168 | typeof }}
+
+    <h4>Object</h4>
+    {{ {} | typeof }}
+
+    <h4>Array</h4>
+    {{ [] | typeof }}
+
+    <h4>Error</h4>
+    {{ error | typeof }}
+
+    <h4>RegExp</h4>
+    {{ regexp | typeof }}
+
+    <h4>Undefined</h4>
+    {{ undefined | typeof }}
+
+    <h4>Null</h4>
+    {{ null | typeof }}
+
 </template>
   <script>
 	var template = document.getElementById('view');
@@ -141,6 +176,8 @@
 	    name: 'Timothy',
         dinner: 'pasta'
 	  }];
+    template.regexp = new RegExp(/a-z/);
+    template.error = new Error();
   </script>
 </body>
 </html>
